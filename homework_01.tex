@@ -25,8 +25,8 @@
 \newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}).\end{quote}}
 \newcommand{\mysectionnumber}[0]{503}
 
-\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{YOUR NAME HERE}
+\title{CSCE 222: Discrete Structures for Computing\\Section 503\\Fall 2016}
+\author{Joseph Martinsen}
 
 \begin{document}
 
@@ -46,27 +46,52 @@ You have $n$ coins, exactly one of which is counterfeit.  You know counterfeit c
 %\begin{solution}
 %\end{solution}
 
-%\newpage
+\newpage
 
 % Algorithms
 \begin{problem} (20 points)\\
 Devise an algorithm that takes as input a list of $n$ integers in unsorted order, where the integers are not necessarily distinct, and outputs the location (index of first element) and length of the longest contiguous non-decreasing subsequence in the list.  If there is a tie, it outputs the location of the first such subsequence.  Express your algorithm in pseudocode.  For the list $9,7,9,4,5,8,1,0,5,9$, what is the algorithm's output? How many comparison operations between elements of the list are used?
 \end{problem}
 
-%\begin{solution}
-%\end{solution}
+\begin{solution}
+\item
+\textbf{procedure} \textit{non-decreasing-location}(\textit{$a_1, a_2, a_3,...,a_n$}: integers)\newline
+$location:=1$\newline
+\textbf{for} i:=$2$ \textbf{to} $n-1$\par
+	\textbf{if} $a_{i-1} < a_i$ \textbf{then}\par
+    	$location:=i$\newline
+        \textbf{else if} $a_{i-1} = a_i$ \textbf{then}\newline
+        \textbf{return} \textit{non-decreasing-location}\{\textit{non-decreasing-location} is the location of the first element in the subsequence of non-decreacing elements\}
 
-%\newpage
+\end{solution}
+
+\newpage
 
 % Growth of Functions - Big O
 \begin{problem} (20 points)\\
 Arrange the following functions in order such that each function is big-$O$ of the next function:  $2\cdot3^n$, $3n!$, $2019\log{n}$, $\displaystyle \frac{n^3}{10^6}$, $n\log{n}$,  $\sqrt{n}$, $3\cdot2^n$.  Prove your answer is correct by giving the witnesses for each pair of consecutive functions.
 \end{problem}
 
-%\begin{solution}
-%\end{solution}
+\begin{solution}
+\item The following functions are arranged such that that each function is a big-$O$ of the next function.
+\begin{enumerate}
+\item $2019\log{n}$ \newline
+$2019\log{n}$ is $O(\sqrt{n})$ by taking $C = 2019$ and $k = 1$ as witnesses. 
+\item $\sqrt{n}$
+\item $n\log{n}$
+\item $3\cdot2^n$
+\item $2\cdot3^n$
+\item $3n!$
+\bigskip
+\end{enumerate}
 
-%\newpage
+$\sqrt{n}$ is $O(n\log{n})$ by taking  $C = 1$ and $k = 4$ as witnesses. \bigskip\newline
+$n\log{n}$ is $O(3\cdot2^n)$ by taking  $C = 1$ and $k = 1$ as witnesses. \bigskip\newline
+$3\cdot2^n$ is $O(2\cdot3^n)$ by taking  $C = \dfrac{3}{2}$ and $k = 0$ as witnesses. \bigskip\newline
+$2\cdot3^n$ is $O(3n!)$ by taking  $C = \dfrac{2}{3}$ and $k = 7$ as witnesses. \bigskip\newline
+\end{solution}
+
+\newpage
 
 % Growth of Functions - Big O
 \begin{problem} (20 points)\\
@@ -75,8 +100,8 @@ For each of the following functions, give a big-$O$ estimate, including witnesse
 \item $(n^2+8)(n+1)$
 \item $(n\log{n} + 1)^2+(\log{n}+1)(n^2+1)$
 \item $\displaystyle n^{2^n}+n^{n^2}$
-\item $\displaystyle \frac{n^4+5\log{n}}{n^3+1}$
-\item $2n^4+7n^3+5n+3$
+\item $\displaystyle \frac{n^4+5\log{n}}{x^3+1}$
+\item $2x^4+7x^3+5x+3$
 \end{enumerate}
 \end{problem}
 
@@ -97,10 +122,24 @@ For each of the following functions, determine whether that function is of the s
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}
-%\end{solution}
 
-%\newpage
+
+\begin{solution}
+
+\item Suppose that there are constants $C$ and $k$ for which $n^2 \leq C(13n+12)$ whenever $n > k$. We can divide both 
+		sides of $Cn^2 \leq 13n+12$ by $n$ and simplify to $n \leq 3C$ for values of $n > k$. However, no matter what 
+        $C$ and $k$ are, the inequality $n \leq 3C$ cannot hold for all $n$ with $n > k$. In particular, once we set a 
+        value of $k$, we see that when $n$ is larger than the maximum of $k$ and $C$, it is not true that $n \leq C$ 
+        even though $n > k$. This contradiction shows that $n^2$ is not $O(13n+12)$. Thus the function $13n+12$ is not 
+        as the same order as $n^2$.
+\item Suppose that there are particular witnesses $C$ and $k$ for which $n^2+1000n\log{n} \leq Cn^2$. After dividing both sides by $n$ the resultant is $ n + \log{{n}^{1000}}\leq Cn$.
+\item $3^n$
+\item $3n^2+n-5$
+\item $\displaystyle \frac{n^3+2n^2-n+3}{4n}$
+
+\end{solution}
+
+\newpage
 
 
 \bigskip
