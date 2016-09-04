@@ -2,6 +2,7 @@
 \usepackage{amsmath,amsthm,latexsym,paralist,url}
 \usepackage[margin=1in]{geometry}
 
+
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
@@ -43,8 +44,29 @@
 You have $n$ coins, exactly one of which is counterfeit.  You know counterfeit coins weigh more than authentic coins.  Devise an algorithm for finding the counterfeit coin using a balance scale\footnote{A balance scale compares the weight of objects placed on it.  The result of the comparison is either left side heavier, right side heavier, or both sides equal.}.  Express your algorithm in pseudocode.  For $n=12$, how many weighings does your algorithm use? 
 \end{problem}
 
-%\begin{solution}
-%\end{solution}
+\begin{solution}
+
+\item \bf procedure $counterfeit\_coin(a_{1}+a_{2}+a_{3}+...+a_{n}$: coin weights$)$
+
+$n=12$
+
+for $i=1\ $to $n$
+
+\qquad $a_{i-1}\rightarrow left\_scale$
+
+\qquad $a_{i}\rightarrow right\_scale$ 
+
+\qquad if $right\_scale<left\_scale$
+
+\qquad \qquad $counterfeit\_location=i$
+
+\qquad else if $left\_scale>right\_scale$
+
+\qquad \qquad $counterfeit\_location=i-1$
+
+return $counterfeit\_location$
+
+\end{solution}
 
 \newpage
 
@@ -57,7 +79,7 @@ Devise an algorithm that takes as input a list of $n$ integers in unsorted order
 \item
 \textbf{procedure} \textit{non-decreasing-location}(\textit{$a_1, a_2, a_3,...,a_n$}: integers)\newline
 $location:=1$\newline
-\textbf{for} i:=$2$ \textbf{to} $n-1$\par
+\textbf{for} $i=2$ \textbf{to} $n-1$\par
 	\textbf{if} $a_{i-1} < a_i$ \textbf{then}\par
     	$location:=i$\newline
         \textbf{else if} $a_{i-1} = a_i$ \textbf{then}\newline
@@ -73,22 +95,92 @@ Arrange the following functions in order such that each function is big-$O$ of t
 \end{problem}
 
 \begin{solution}
-\item The following functions are arranged such that that each function is a big-$O$ of the next function.
-\begin{enumerate}
-\item $2019\log{n}$ \newline
-$2019\log{n}$ is $O(\sqrt{n})$ by taking $C = 2019$ and $k = 1$ as witnesses. 
-\item $\sqrt{n}$
-\item $n\log{n}$
-\item $3\cdot2^n$
-\item $2\cdot3^n$
-\item $3n!$
-\bigskip
-\end{enumerate}
+The following functions are arranged such that that each function is a big-$%
+O $ of the next function.
 
-$\sqrt{n}$ is $O(n\log{n})$ by taking  $C = 1$ and $k = 4$ as witnesses. \bigskip\newline
-$n\log{n}$ is $O(3\cdot2^n)$ by taking  $C = 1$ and $k = 1$ as witnesses. \bigskip\newline
-$3\cdot2^n$ is $O(2\cdot3^n)$ by taking  $C = \dfrac{3}{2}$ and $k = 0$ as witnesses. \bigskip\newline
-$2\cdot3^n$ is $O(3n!)$ by taking  $C = \dfrac{2}{3}$ and $k = 7$ as witnesses. \bigskip\newline
+\begin{enumerate}
+\item $2019\log {n}$
+
+$\qquad 2019\log {n\leq C}\sqrt{n}$
+
+$\qquad 2019\log {n\leq 2019}\sqrt{n}\qquad C=2019$
+
+$\qquad \log {n\leq }\sqrt{n}$
+
+$\qquad 0.0\leq 1\qquad \qquad \qquad \qquad k=1$
+
+$\qquad 2019\log {n}$ is $O(\sqrt{n})$ by taking $C=2019$ and $k=1$ as
+witnesses. \bigskip
+
+\item $\sqrt{n}$
+
+\qquad $\sqrt{n}\leq C(n\log {n)}$
+
+\qquad $\frac{1}{\sqrt{n}}\leq \log {n\qquad \qquad C=1}$
+
+\qquad $\frac{1}{2}\leq \log 4\qquad \qquad k=4$
+
+\qquad $0.5\leq 1.\,\allowbreak 386\,3$
+
+\qquad $\sqrt{n}$ is $O(n\log {n})$ by taking $C=1$ and $k=4$ as witnesses.
+\bigskip
+
+\item $n\log {n}$
+
+$\qquad n\log {n\leq C(}\dfrac{n^{3}}{10^{6}})$
+
+$\qquad n\log {n\leq }\dfrac{n^{3}}{10^{6}}\qquad C=1$
+
+$\qquad 6044\leq 6332\qquad \qquad \qquad \qquad k=1850$
+
+$\qquad n\log {n}$ is $O(\dfrac{n^{3}}{10^{6}})$ by taking $C=1$ and $k=1850$
+as witnesses. \bigskip 
+
+\item $\dfrac{n^{3}}{10^{6}}$
+
+$\qquad \dfrac{n^{3}}{10^{6}}\leq C(3\cdot 2^{n})$
+
+$\qquad \dfrac{n^{3}}{10^{6}}\leq 3\cdot 2^{n}\qquad C=1$
+
+$\qquad 0\leq 3\qquad \qquad \qquad k=0$
+
+$\qquad \dfrac{n^{3}}{10^{6}}$ is $O(3\cdot 2^{n})$ by taking $C=1$ and $k=0$
+as witnesses. \bigskip 
+
+\item $3\cdot 2^{n}$
+
+\qquad $3\cdot 2^{n}\leq C(2\cdot 3^{n})$
+
+\qquad $3\cdot 2^{n}\leq \dfrac{3}{2}(2\cdot 3^{n})\qquad C=\dfrac{3}{2}$
+
+\qquad $3\cdot 2^{n}\leq 3\cdot 3^{n}$
+
+\qquad $2^{n}\leq 3^{n}$
+
+\qquad $2\leq 3\qquad \qquad \qquad k>1$
+
+\qquad $3\cdot 2^{n}$ is $O(2\cdot 3^{n})$ by taking $C=\dfrac{3}{2}$ and $%
+k>1$ as witnesses.
+
+\item $2\cdot 3^{n}$
+
+\qquad $2\cdot 3^{n}\leq C(3n!)$
+
+\qquad $2\cdot 3^{n}\leq \dfrac{2}{3}(3n!)\qquad C=\dfrac{2}{3}$
+
+\qquad $2\cdot 3^{n}\leq 2\cdot n!$
+
+\qquad $3^{n}\leq n!$
+
+\qquad $2187\leq 5040\qquad \qquad \qquad k>7$
+
+$\qquad 2\cdot 3^{n}$ is $O(3n!)$ by taking $C=\dfrac{2}{3}$ and $k>7$ as
+witnesses$\qquad \qquad $ \bigskip \newline
+
+\item $3n!$ \bigskip 
+
+\qquad $3n!$ is $O(n!)$ with $C=4$ and $k>0$ as witnesses
+\end{enumerate}
 \end{solution}
 
 \newpage
@@ -105,8 +197,79 @@ For each of the following functions, give a big-$O$ estimate, including witnesse
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}
-%\end{solution}
+\begin{solution}
+\item \begin{enumerate}
+\item $(n^{2}+8)(n+1)$
+
+\qquad $(n^{2}+8)(n+1)\leq C(n^{3})$
+
+$\qquad n^{3}+n^{2}+8n+8\leq C(n^{3}+n^{3}+n^{3}+n^{3})$
+
+\qquad $n^{3}+n^{2}+8n+8\leq 4(n^{3})\qquad C=4$
+
+\qquad $68\leq 108\qquad \qquad \qquad \qquad \qquad k>3$
+
+\qquad Thus $n^{3}$ is $O((n^{2}+8)(n+1))$ by taking $C=4$ and $k>3$ as
+witnesses.
+
+\item $(n\log {n}+1)^{2}+(\log {n}+1)(n^{2}+1)$
+
+\qquad $(n\log {n}+1)^{2}+(\log {n}+1)(n^{2}+1)\leq C(n^{3})$
+
+\qquad $(n\log {n}+1)(\log {n}+1+n^{2}+1)\leq C(n^{3})$
+
+\qquad $(n\log {n})^{2}+n\log {n+}n\log {n+1+n}^{3}\log {n}+n^{2}+n\log
+n+1\leq C()$
+
+\qquad $n^{3}\log n+(n\log {n})^{2}+5n\log n+n^{3}+2n^{2}+2\leq
+C(n^{3}+n^{3}+n^{3}+n^{3}+n^{3})$
+
+\qquad $n^{3}\log n+(n\log {n})^{2}+5n\log n+n^{3}+2n^{2}+2\leq 5n^{3}\qquad
+C=5$
+
+\qquad $8.06\leq 40\qquad k>3$
+
+\qquad Thus $(n\log {n}+1)^{2}+(\log {n}+1)(n^{2}+1)$ is $O(n^{3})$ with $C=5
+$ and $k>3$ as witnesses.
+
+\qquad 
+
+\item $n^{2^{n}}+n^{n^{2}}$
+
+\qquad $n^{2^{n}}+n^{n^{2}}\leq C(n^{2^{n}})$
+
+\qquad $n^{2^{n}}+n^{n^{2}}\leq 2n^{2^{n}}\qquad \qquad \qquad C=2$
+
+\qquad $2.33\cdot 10^{22}\leq 4.66\cdot 10^{22}\qquad k>5$
+
+\qquad Thus $n^{2^{n}}+n^{n^{2}}$ is $O(n^{2^{n}})$ with $C=2$ and $k>5$ as
+witnesses.
+
+\item $\dfrac{n^{4}+5\log {n}}{n^{3}+1}$
+
+\qquad $\dfrac{n^{4}+5\log {n}}{n^{3}+1}\leq C(n)$
+
+\qquad $\dfrac{n^{4}}{n^{3}+1}+\dfrac{5\log {n}}{n^{3}+1}\leq 2n\qquad C=2$
+
+\qquad $5\leq 10\qquad \qquad k>5$
+
+\qquad Thus $\dfrac{n^{4}+5\log {n}}{n^{3}+1}$ is $O(x)$ with $C=2$ and $k>5$
+as witnesses
+
+\item $2x^{4}+7x^{3}+5x+3$
+
+\qquad $2x^{4}+7x^{3}+5x+3\leq 2x^{4}+x^{4}+x^{4}+x^{4}$
+
+$\qquad 2x^{4}+7x^{3}+5x+3\leq 5x^{4}\qquad \qquad C=5$
+
+$\qquad 369\leq 405\qquad \qquad k>3$\newline
+
+\qquad Thus $2x^{4}+7x^{3}+5x+3$ is $O(x^{4})$ with $C=5$ and $k>3$ as
+witnesses
+\end{enumerate}
+
+
+\end{solution}
 
 \newpage
 
