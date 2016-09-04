@@ -2,7 +2,6 @@
 \usepackage{amsmath,amsthm,latexsym,paralist,url}
 \usepackage[margin=1in]{geometry}
 
-
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 \newtheorem*{solution}{Solution}
@@ -26,7 +25,7 @@
 \newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}).\end{quote}}
 \newcommand{\mysectionnumber}[0]{503}
 
-\title{CSCE 222: Discrete Structures for Computing\\Section 503\\Fall 2016}
+\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
 \author{Joseph Martinsen}
 
 \begin{document}
@@ -71,21 +70,41 @@ return $counterfeit\_location$
 \newpage
 
 % Algorithms
-\begin{problem} (20 points)\\
-Devise an algorithm that takes as input a list of $n$ integers in unsorted order, where the integers are not necessarily distinct, and outputs the location (index of first element) and length of the longest contiguous non-decreasing subsequence in the list.  If there is a tie, it outputs the location of the first such subsequence.  Express your algorithm in pseudocode.  For the list $9,7,9,4,5,8,1,0,5,9$, what is the algorithm's output? How many comparison operations between elements of the list are used?
+\begin{problem}
+(20 points)\newline
+Devise an algorithm that takes as input a list of $n$ integers in unsorted
+order, where the integers are not necessarily distinct, and outputs the
+location (index of first element) and length of the longest contiguous
+non-decreasing subsequence in the list. If there is a tie, it outputs the
+location of the first such subsequence. Express your algorithm in
+pseudocode. For the list $9,7,9,4,5,8,1,0,5,9$, what is the algorithm's
+output? How many comparison operations between elements of the list are used?
 \end{problem}
 
 \begin{solution}
-\item
-\textbf{procedure} \textit{non-decreasing-location}(\textit{$a_1, a_2, a_3,...,a_n$}: integers)\newline
-$location:=1$\newline
-\textbf{for} $i=2$ \textbf{to} $n-1$\par
-	\textbf{if} $a_{i-1} < a_i$ \textbf{then}\par
-    	$location:=i$\newline
-        \textbf{else if} $a_{i-1} = a_i$ \textbf{then}\newline
-        \textbf{return} \textit{non-decreasing-location}\{\textit{non-decreasing-location} is the location of the first element in the subsequence of non-decreacing elements\}
+\item \textbf{procedure} \textit{non-decreasing}(\textit{$%
+a_{1},a_{2},a_{3},...,a_{n}$}: integers)\newline
+$starting\_location=1$\newline
+$length=0$\newline
+$j=1$\newline
+\textbf{for} $i=2$ \textbf{to} $n$
 
+\qquad \textbf{if} $a_{i-1}<a_{i}$ \textbf{then}
+
+\qquad \qquad $length(j)$ $=i-1-starting\_location$
+
+\qquad \qquad $location(j)=i$
+
+$\qquad \qquad j=j+1$\newline
+$k=$ location of first instance of $max(length)$ in array $length$\newline
+$length\_subsequence=length(k)$\newline
+$location\_subsequence=location(k)$\newline
+\textbf{return} \textit{non-decreasing}$\{\mathit{length%
+\_subsequence,locationsubsequence}\}$\newline
+
+The algorithms output would be $3$. 9 comparison operators would be used between elements in the list.
 \end{solution}
+
 
 \newpage
 
@@ -183,6 +202,7 @@ witnesses$\qquad \qquad $ \bigskip \newline
 \end{enumerate}
 \end{solution}
 
+
 \newpage
 
 % Growth of Functions - Big O
@@ -192,8 +212,8 @@ For each of the following functions, give a big-$O$ estimate, including witnesse
 \item $(n^2+8)(n+1)$
 \item $(n\log{n} + 1)^2+(\log{n}+1)(n^2+1)$
 \item $\displaystyle n^{2^n}+n^{n^2}$
-\item $\displaystyle \frac{n^4+5\log{n}}{x^3+1}$
-\item $2x^4+7x^3+5x+3$
+\item $\displaystyle \frac{n^4+5\log{n}}{n^3+1}$
+\item $2n^4+7n^3+5n+3$
 \end{enumerate}
 \end{problem}
 
@@ -256,15 +276,15 @@ witnesses.
 \qquad Thus $\dfrac{n^{4}+5\log {n}}{n^{3}+1}$ is $O(x)$ with $C=2$ and $k>5$
 as witnesses
 
-\item $2x^{4}+7x^{3}+5x+3$
+\item $2n^{4}+7n^{3}+5n+3$
 
-\qquad $2x^{4}+7x^{3}+5x+3\leq 2x^{4}+x^{4}+x^{4}+x^{4}$
+\qquad $2n^{4}+7n^{3}+5n+3\leq 2n^{4}+n^{4}+n^{4}+n^{4}$
 
-$\qquad 2x^{4}+7x^{3}+5x+3\leq 5x^{4}\qquad \qquad C=5$
+$\qquad 2n^{4}+7n^{3}+5n+3\leq 5n^{4}\qquad \qquad C=5$
 
 $\qquad 369\leq 405\qquad \qquad k>3$\newline
 
-\qquad Thus $2x^{4}+7x^{3}+5x+3$ is $O(x^{4})$ with $C=5$ and $k>3$ as
+\qquad Thus $2n^{4}+7n^{3}+5n+3$ is $O(n^{4})$ with $C=5$ and $k>3$ as
 witnesses
 \end{enumerate}
 
@@ -285,8 +305,6 @@ For each of the following functions, determine whether that function is of the s
 \end{enumerate}
 \end{problem}
 
-
-
 \begin{solution}
 
 \item Suppose that there are constants $C$ and $k$ for which $n^2 \leq C(13n+12)$ whenever $n > k$. We can divide both 
@@ -301,6 +319,7 @@ For each of the following functions, determine whether that function is of the s
 \item $\displaystyle \frac{n^3+2n^2-n+3}{4n}$
 
 \end{solution}
+
 
 \newpage
 
