@@ -1,0 +1,84 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, September 09, 2016 00:44:10}
+%TCIDATA{LastRevised=Friday, September 09, 2016 01:46:26}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\begin{problem}
+(20 points)\newline
+Do Supplementary Exercise 29 of Chapter 3 (page 234).
+
+a) Use pseudocode to specify a brute-force algorithm that determines when
+given as input a sequence of n positive integers whether there are two
+distinct terms of the sequence that have as sum a third term. The algorithm
+should loop through all triples of terms of the sequence, checking whether
+the sum of the first two terms equals the third. b) Give a big-O estimate
+for the complexity of the bruteforce algorithm from part (a).
+\end{problem}
+
+\begin{solution}
+\end{solution}
+
+\qquad \qquad \qquad \textbf{procedure }\textit{brute-force(}$%
+a_{1},a_{2},a_{3},...,a_{n}$)
+
+\qquad \qquad \textbf{\qquad for }$i=1$\textbf{\ to }$n\qquad \qquad \qquad
+\qquad \qquad \qquad O(n)$
+
+\textbf{\qquad \qquad \qquad \qquad for }$j=i+1$\textbf{\ to }$n\qquad
+\qquad \qquad \qquad O(n)$
+
+\textbf{\qquad \qquad \qquad \qquad \qquad for }$k=1$\textbf{\ to }$n\qquad
+\qquad \qquad \qquad O(n)$
+
+\textbf{\qquad \qquad \qquad \qquad \qquad \qquad if }$a_{i}+a_{j}=a_{k}$%
+\textbf{\ then\qquad \qquad }$O(1)$
+
+\textbf{\qquad \qquad \qquad \qquad \qquad \qquad \qquad return }\textit{true%
+}
+
+\textbf{\qquad \qquad \qquad \qquad \qquad \qquad else}
+
+\textbf{\qquad \qquad \qquad \qquad \qquad \qquad return }\textit{false}
+
+\qquad \qquad \qquad The complexity fo the algorithm is $O(n^{3})$
+
+\end{document}

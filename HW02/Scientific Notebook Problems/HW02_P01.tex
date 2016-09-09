@@ -1,44 +1,47 @@
+
 \documentclass{article}
-\usepackage{amsmath,amsthm,latexsym,paralist,url}
-\usepackage[margin=1in]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, September 09, 2016 00:42:28}
+%TCIDATA{LastRevised=Friday, September 09, 2016 01:32:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
 
-\theoremstyle{definition}
-\newtheorem{problem}{Problem}
-\newtheorem*{solution}{Solution}
-\newtheorem*{resources}{Resources}
 
-
-\newcommand{\honor}{\noindent \textbf{Aggie Honor Statement: }On my honor as an Aggie, I have neither
-  given nor received any unauthorized aid on any portion of the academic work included in this assignment.
-}
-
-
-\newcommand{\checklist}{\noindent\textbf{Checklist:}
-\begin{compactenum}
-\item Did you abide by the Aggie Honor Code?
-\item Did you solve all problems and start a new page for each?
-\item Did you submit the PDF to eCampus?
-\end{compactenum}
-}
-
-\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
-\newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}).\end{quote}}
-\newcommand{\mysectionnumber}[0]{503}
-
-\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{Joseph Martinsen}
-
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
 \begin{document}
 
-\maketitle
 
-\problemset{2}
-
-\duedate{11 September 2016 (Sunday) before 11:59 p.m.}
-
-\bigskip
-
-% Growth of Functions - Big Theta
 \begin{problem}
 (20 points)\newline
 For each of the following functions, determine whether that function is of
@@ -103,7 +106,7 @@ as witnesses and $n^{2}+1000n\log {n}$ is  $\Omega (n^{2})$ with $C=\dfrac{1%
 
 \item $3^{n}$
 
-\qquad Is $3^{n}~O(n^{2})$?$\qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\qquad Is $3^{n}~O(n^{2})$?$\qquad \qquad \qquad \qquad \qquad \qquad \qquad 
 $Is $3^{n}$ $\Omega (n^{2})$?
 
 \qquad $3^{n}\leq C(n^{2})\qquad \qquad \qquad \qquad \qquad \qquad \qquad
@@ -160,92 +163,4 @@ same order as $n^{2}$
 \end{enumerate}
 \end{solution}
 
-
-\newpage
-
-% Complexity of Algorithms
-\begin{problem}
-(20 points)\newline
-Do Supplementary Exercise 29 of Chapter 3 (page 234).
-
-a) Use pseudocode to specify a brute-force algorithm that determines when
-given as input a sequence of n positive integers whether there are two
-distinct terms of the sequence that have as sum a third term. The algorithm
-should loop through all triples of terms of the sequence, checking whether
-the sum of the first two terms equals the third. b) Give a big-O estimate
-for the complexity of the bruteforce algorithm from part (a).
-\end{problem}
-
-\begin{solution}${}$\\
-
-
-\qquad \qquad \qquad \textbf{procedure }\textit{brute-force(}$
-a_{1},a_{2},a_{3},...,a_{n}$)
-
-\qquad \qquad \textbf{\qquad for }$i=1$\textbf{\ to }$n\qquad \qquad \qquad
-\qquad \qquad \qquad O(n)$
-
-\textbf{\qquad \qquad \qquad \qquad for }$j=i+1$\textbf{\ to }$n\qquad
-\qquad \qquad \qquad O(n)$
-
-\textbf{\qquad \qquad \qquad \qquad \qquad for }$k=1$\textbf{\ to }$n\qquad
-\qquad \qquad \qquad O(n)$
-
-\textbf{\qquad \qquad \qquad \qquad \qquad \qquad if }$a_{i}+a_{j}=a_{k}$
-\textbf{\ then\qquad \qquad }$O(1)$
-
-\textbf{\qquad \qquad \qquad \qquad \qquad \qquad \qquad return }\textit{true
-}
-
-\textbf{\qquad \qquad \qquad \qquad \qquad \qquad else}
-
-\textbf{\qquad \qquad \qquad \qquad \qquad \qquad return }\textit{false}
-
-\qquad \qquad \qquad The complexity for the algorithm is $O(n^{3})$
-
-\end{solution}
-\newpage
-
-% Propositional Logic
-\begin{problem} (20 points)\\
-Do  Exercise 31 of Chapter 1.1 (page 15).
-\end{problem}
-
-\begin{solution}
-
-
-\end{solution}
-
-\newpage
-
-% Applications of Propositional Logic
-\begin{problem} (20 points)\\
-Do  Exercises 19, 21, and 23 of Chapter 1.2 (page 23).
-\end{problem}
-
-\begin{solution}
-
-
-
-\end{solution}
-
-\newpage
-
-% Propositional Equivalences
-\begin{problem} (20 points)\\
-Do  Exercises 50 and 51 of Chapter 1.3 (page 36).
-\end{problem}
-
-\begin{solution}
-
-
-
-
-\end{solution}
-\newpage
-\bigskip
-\honor
-
-\bigskip
-\checklist
 \end{document}
