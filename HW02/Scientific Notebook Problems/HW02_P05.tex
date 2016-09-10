@@ -6,7 +6,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Friday, September 09, 2016 00:46:35}
-%TCIDATA{LastRevised=Friday, September 09, 2016 00:46:41}
+%TCIDATA{LastRevised=Saturday, September 10, 2016 17:44:53}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
 %TCIDATA{CSTFile=Math with theorems suppressed.cst}
@@ -39,16 +39,59 @@
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 \input{tcilatex}
-
 \begin{document}
-Do  Exercises 50 and 51 of Chapter 1.3 (page 36).
-\end{problem}
-
-\begin{solution}
 
 
+a)%
+\begin{tabular}{llll}
+$p$ & $p$ & $\lnot \ p$ & $p\downarrow p$ \\ 
+1 & 1 & 0 & 0 \\ 
+1 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & 1 \\ 
+0 & 0 & 1 & 1%
+\end{tabular}
 
+\qquad
 
-\end{solution}
+$\lnot \ p$ and $p\downarrow p$ have the same truth values
+
+\vspace{1pt}
+
+b)$%
+\begin{tabular}{lllll}
+p & q & $p\downarrow q$ & $(p\downarrow q)\downarrow (p\downarrow q)$ & p or
+q \\ 
+1 & 1 & 0 & 1 & 1 \\ 
+1 & 0 & 0 & 1 & 1 \\ 
+0 & 1 & 0 & 1 & 1 \\ 
+0 & 0 & 1 & 0 & 0%
+\end{tabular}%
+$
+
+$(p\downarrow q)\downarrow (p\downarrow q)$ and p or q have the same truth
+values.
+
+\vspace{1pt}
+
+c)\qquad $p\downarrow q$ is the same as $\lnot (p\ or\ q)$. Also, the
+logical operators $\lnot $ and $or$ can be used to express any logical
+expression, $\downarrow $ is logically complete.
+
+\vspace{1pt}
+
+51)
+
+\begin{tabular}{llllll}
+$p$ & $q$ & $p\rightarrow q$ & $p\downarrow q$ & $(p\downarrow p)\downarrow q
+$ & $((p\downarrow p)\downarrow q)\downarrow ((p\downarrow p)\downarrow q)$
+\\ 
+1 & 1 & 1 & 0 & 0 & 1 \\ 
+1 & 0 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 1 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & 1 & 0 & 0%
+\end{tabular}
+
+Thus $((p\downarrow p)\downarrow q)\downarrow ((p\downarrow p)\downarrow q)$
+is the same as $p\rightarrow q$
 
 \end{document}
