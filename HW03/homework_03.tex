@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath,amsthm,latexsym,paralist,url}
+\usepackage{amssymb}
 \usepackage[margin=1in]{geometry}
 
 \theoremstyle{definition}
@@ -12,7 +13,7 @@
   given nor received any unauthorized aid on any portion of the academic work included in this assignment.
 }
 
- 
+
 \newcommand{\checklist}{\noindent\textbf{Checklist:}
 \begin{compactenum}
 \item Did you abide by the Aggie Honor Code?
@@ -27,7 +28,7 @@
 \newcommand{\mysectionnumber}[0]{503}
 
 \title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{YOUR NAME HERE}
+\author{Joseph Martinsen}
 
 \begin{document}
 
@@ -44,50 +45,505 @@
 Excercise 60 of Section 1.4 (page 56).
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+Universal Discourse of x consists of all English text
+P(x): x is a clear explanation\\
+Q(x): x is satisfactory\\
+R(x): x is an excuse\\
+\begin{enumerate}[a)] % a), b), c), ...
+\item %a)
+$\forall x(P(x) \rightarrow Q(x))$
 
-%\newpage
+\item
+$\exists x(R(x) \wedge \neg Q(x))$
+
+\item
+$\exists x(R(x) \wedge \neg P(x))$
+
+\item
+\begin{tabular}{ll}
+Step & Reason \\
+1. $\exists x(R(x) \wedge \neg Q(x))$ & Premise \\
+2. $R(a) \wedge \neg Q(a)$            & Existential instantiation on \bf{1} \\
+3. $\forall x(P(x) \rightarrow Q(x))$ & Premise \\
+4. $P(a) \rightarrow Q(x)$            & Universal instantiation on \bf{3} \\
+5. $\neg Q(x)$                        & By simplification on \bf{2} \\
+6. $\neg P(x)$                        & Modus Tollens of \textbf{4} and \bf{5} \\
+7. $R(a)$                             & By simplification of \bf{2} \\
+8. $R(a) \wedge \neg P(a)$            & Conjunction of \textbf{6} and \bf{7} \\
+9. $\exists (R(x) \wedge \neg P(x))$  & Existential Generalization of \bf{8}
+\end{tabular} \\ \ \\ \ \\
+Holding \textbf{a)} and \textbf{b)} as valid premises, \textbf{c)} does follow.
+
+\end{enumerate}
+
+
+
+\end{solution}
+
+\newpage
 
 % Nested Quantifiers
 \begin{problem} (20 points)\\
 Exercise 36 of Section 1.5 (page 68).
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\begin{enumerate}[a)]
+\item No one has lost more than \$1000 playing the lottery \\
+      Let $L(x,y)$ represent a person $x$ who has lost $y$ dollars playing the lottery \\
+      The statement using quantifiers is:
 
-%\newpage
+      $\neg \exists x \exists y ( y > 1000 \wedge L(x,y) )$
+
+      Now negate the statement
+
+      $\neg[\neg \exists x \exists y ( y > 1000 \wedge L(x,y) )] \equiv \exists x \forall y
+          \neg (y > 1000 \wedge L(x,y) )$
+
+      This reads as \textbf{someone has lost less than or equal to \$1000 playing the lottery}
+
+\item There is a student in this class who has chatted with exactly one other student \\
+      Let $B(x,y)$ represent a student in class, $x$, has chatted with a student in class $y$ but not any of the
+      other students in class, $z$
+
+      $\exists x \exists y \forall z ( x \neq y \wedge x \neq z \wedge B(x,y) \wedge \neg B(x,z) )$
+
+      Now Negate the statement:
+
+      $\neg [\exists x \exists y \forall z ( x \neq y \wedge x \neq z \wedge B(x,y) \wedge \neg B(x,z) )] \equiv
+          \forall x \forall y \exists z \neg ( x \neq y \wedge x \neq z \wedge B(x,y) \wedge \neg B(x,z) )$
+
+      This reads as \textbf{everyone in class has spoken with no one or everyone}
+
+\item No student in this class has sent e-mail to exactly two other students in class \\
+      Let $A(x,y)$ represent a student in class, $x$ who has sent an email to student in class $y$
+
+      $\neg \exists x \exists y \exists z ( y \neq z \wedge x \neq z \wedge ( A(x,y) \wedge A(x,z)  )  )$
+
+      Now Negate the statement:
+
+      $\neg [\neg \exists x \exists y \exists z ( y \neq z \wedge x \neq z \wedge ( A(x,y) \wedge A(x,z))) ] \equiv
+          \exists x \forall y \forall z \neg(y \neq z \wedge x \neq z \wedge ( A(x,y) \wedge A(x,z)))$
+
+      This reads as \textbf{some student in class has sent email to exactly two other students in class}
+
+\item Some student has solved every exercise in this book \\
+      Let $D(x,y)$ represents a student in class $x$ who has solved exercise $y$ in the book
+
+      $\exists x \forall y D(x,y)$
+
+      Now negate the statement:
+
+      $\neg [\exists x \forall y D(x,y)] \equiv \forall \exists y D(x,y)$
+
+      This reads as \textbf{every student in class has solved an exercise in the book}
+
+\item No student has solved at least one exercise in every section of the book \\
+      Let $P(x,y)$ represent a student $x$ in class has solved exercise $y$ \\
+      Let $B(y,z)$ represent a exercise $y$ in section $z$ of the book
+
+      $\neg \exists x \exists y \forall z ( P(x,y) \wedge B(y,z) )  $
+
+      Now negate it:
+
+      $\neg [ \neg \exists x \exists y \forall z ( P(x,y) \wedge B(y,z) ]) \equiv
+          \exists x \exists y \forall z ( P(x,y) \wedge B(y,z)$
+
+      This reads as \textbf{some student has solved at least one exercise in every section of this book}
+
+\end{enumerate}
+\end{solution}
+
+\newpage
 
 % Rules of Inference
 \begin{problem} (20 points)\\
 Exercise 34 of Section 1.6 (page 80).
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+1. Logic is difficult or not many like logic \\
+2. If mathematics is easy then logic is not difficult \\
+The universal discourse for $x$ is all students \\
+$A(x)$ represents logic is difficult to students \\
+$B(x)$ represents many students like logic \\
+$C(x)$ represents mathematics is easy to students \\
+The premises can be rewritten as \\
+1. $A(x) \vee \neg B(x)$ \\
+2. $C(x) \rightarrow \neg A(x)$
+\begin{enumerate}[a)]
+\item That mathematics is not easy, if many students like logic
 
-%\newpage
+      $B(x) \rightarrow \neg C(x) \equiv \neg B(x) \vee \neg C(x)$
+
+      The argument is:
+
+      $A(x) \vee \neg B(x)$ \\
+      $\displaystyle \dfrac{\neg C(x) \rightarrow \neg A(x)}{\therefore \neg B(x) \vee \neg C(x)}$
+
+      Using rules of inference resolution, this conclusion is valid \\
+      Since $\neg B(x) \vee \neg C(x)$ is valid thus $B(x) \rightarrow \neg C(x)$ is valid as well
+
+\item That not many students like logic, if mathematics is not easy
+
+      $\neg C(x) \rightarrow \neg B(x) \equiv C(x) \vee \neg B(x)$
+
+      The argument is:
+
+      $A(x) \vee \neg B(x)$ \\
+      $\displaystyle \dfrac{\neg C(x) \rightarrow \neg A(x)}{\therefore C(x) \vee \neg B(x)}$
+
+      If the inference is used, by resolution, the correct conclusion would be $\neg C(x) \vee \neg B(x)$ not $C(x)
+      \vee \neg B(x) \therefore$ the statement \textbf{That not many students like logic, if mathematics is not easy}
+      is \textbf{invalid}
+
+\item That mathematics is not easy or logic is difficult.
+
+      $\neg C(x) \vee A(x)$
+
+      The argument is:
+
+      $A(x) \vee \neg B(x)$ \\
+      $\displaystyle \dfrac{\neg C(x) \rightarrow \neg A(x)}{\therefore \neg C(x) \vee A(x)}$
+
+      If inference by resolution is used, the correct conclusion would be $ \neg B(x) \vee \neg C(x)$ not $\neg C(x)
+      \vee A(x) \therefore$ the statement \textbf{That mathematics is not easy or logic is difficult} is
+      \textbf{invalid}
+
+\item That logic is not difficult or mathematics is not easy.
+
+      $\neg A(x) \vee \neg C(x)$
+
+      $A(x) \vee \neg B(x)$ \\
+      $\displaystyle \dfrac{\neg C(x) \rightarrow \neg A(x)}{\therefore \neg A(x) \vee \neg C(x)}$
+
+      This statement is $\equiv$ $C(x) \rightarrow \neg A(x)$ which is exactly the same as the $2^{nd}$ premise
+      $\therefore$ the statement $\neg A(x) \vee \neg C(x)$ is \textbf{valid}
+
+\item That if not many students like logic, then either mathematics is not easy or logic is not difficult.
+
+      \begin{tabular}{ll}
+        $\neg B(x) \rightarrow ( \neg C(x) \vee \neg A(x) )$ & Initial statement \\
+        $\neg B(x) \rightarrow \neg ( C(x) \wedge A(x))$     & By DeMorgan's Law \\
+        $\neg(\neg B(x)) \vee \neg ( C(x) \wedge A(x))$      & By $p \rightarrow q \equiv \neg p \vee q$ \\
+        $\neg ( \neg B(x) \wedge (C(x) \wedge A(x))$         & By DeMorgans's Law
+      \end{tabular} \\ \ \\
+      Since $D(x)$ and $\neg D(x)$ both appear in the premise, in order for $\neg ( \neg B(x) \wedge (M(x) \wedge
+      A(x))$ to be valid, $\neg B(x)$ is false or $ \neg C(x)$ is true. This condition follows $\neg B(x) \vee \neg
+      C(x)$ which was proved to be valid in \textbf{a)} $\therefore$ $\neg B(x) \rightarrow ( \neg C(x) \vee \neg
+      A(x) )$ is \textbf{valid}
+
+\end{enumerate}
+\end{solution}
+
+\newpage
 
 % Introduction to Proofs
 \begin{problem} (20 points)\\
 Exercises 18 and 30 of Section 1.7 (page 91).
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\textbf{18.}
+\begin{enumerate}[a)]
+\item Proof by contraposition \\
+      Assume that $n$ is odd \\
+      Then $n = 2k +1$ using some integer $k$ \\
+      $3n+2=3(2k+1)+2$ \\
+      $=6k + 3 + 2$ \\
+      $=6k + 5$ \\
+      $=6k + 4 + 1 $ \\
+      $= 2(3k+2) +1$ is odd $\therefore$ $3n+2$ is odd thus if $n$ is an integer and $3n+2$ is even then $n$ is even
 
-%\newpage
+\item Proof by contradiction \\ \ \\
+      Suppose $3n+2$ is even and $n$ is odd \\ \ \\
+      Let n and m be any two odd integers. Using definition of odd we have that $n = 2a + 1$ and $m = 2b + 1$.
+      Multiplying the two together, the product $n \cdot m = (2a + 1)(2b +1) = 4ab + 2a + 2b +1=2( 2ab + a + b) + 1 =
+      2k + 1$, where k = (2ab +a +b ) is an integer. Therefore the product of two odd numbers results in another odd
+      number. \\
+      Since the product of two odds results in an odd number, it follows that $3n$ is odd thus $3n+2$ is odd.
+      Therefore, the assumption $3n+2$ is even and $n$ results in a contradiction. In conclusion, if $n$ is an
+      integer and $3n+2$ is even then $n$ is even.
+\end{enumerate}
+\textbf{30.} \\ \ \\
+Let $a$ and $b$ be real numbers
+\begin{enumerate}[(i)]
+\item a is less than b
+\item The average of $a$ and $b$ is greater than $a$
+\item the average of $a$ and $b$ is less than $b$
+\end{enumerate}
+$(i) \rightarrow (ii)$
+
+
+Suppose that $a < b$
+
+
+$\Rightarrow b>a$
+
+
+$\Rightarrow b + a > a + a$
+
+
+$\Rightarrow b + a > 2a$
+
+
+$\Rightarrow \dfrac{b+a}{2} > \dfrac{2a}{2}$
+
+
+$\Rightarrow \dfrac{b+a}{2} > a$
+
+
+$\therefore$ the average of $a$ and $b$ is greater than $a$ \\ \ \\
+$(ii) \rightarrow (iii)$
+
+
+Suppose $\dfrac{a+b}{2} > a$\\
+
+
+$\Rightarrow a + b > 2a$
+
+
+$\Rightarrow b > 2a - a$
+
+
+$\Rightarrow b > a$
+
+
+$\Rightarrow b + b > a + b$
+
+
+$\Rightarrow 2b > a + b$
+
+
+$\Rightarrow b > \dfrac{a + b}{2}$
+
+
+$\Rightarrow \dfrac{a + b}{2} < b$\\ \ \\
+$(iii) \rightarrow (i)$
+
+Suppose $\dfrac{a+b}{2} < b$
+
+
+$\Rightarrow a + b < 2b$
+
+
+$\Rightarrow a < 2b - b$
+
+
+$\Rightarrow a < b$\\ \ \\
+\bf Thus the three statements (i), (ii), and (iii) are equivalent.
+
+
+
+
+
+\end{solution}
+
+\newpage
 
 % Proof Methods and Strategies
 \begin{problem} (20 points)\\
 Exercises 2, 4, 6, and 8 of Section 1.8 (page 108).
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
 
-%\newpage
+\begin{solution}\ \\
+
+
+
+\textbf{2.} Prove that there are no positive perfect cubes less than 1000 that are the sum of the cubes of two
+
+
+positive integers. \\
+
+$1^{3} = 1, 2^{3} = 8, 2^{3} = 8, 3^{3} = 27, 4^{3} = 64, 5^{3} = 125, 6^{3} = 216, 7^{3} = 343, 8^{3} = 512, 9^{3} = 729 $
+
+The proof must show that $m^3 + n^3 = a^3$ is false where $a = 1,2,3,4,5,6,7,8,9$ and $m$ and $n$ are positive
+
+
+integers less than $a$ \\
+
+
+$m^3 + n^3 = a^3$
+
+
+$m^3 = a^3 - n^3$
+
+
+$\therefore m^3 = (a-n)(a^2 +2an + n^2)$ \\
+
+
+Using $a =2$ and $ n = 1$
+
+
+$(2-1)(4+2+1) = 7 \neq m^3$ \\
+
+By using a Mathematical computation device, the following is shown
+
+
+If $a = 3$ then $n = 1,2$ which results in $ \neq m^3$
+
+
+If $a = 4$ then $n = 1,2,3$ which results in $37, 56, 63 \neq m^3$
+
+
+If $a = 5$ then $n = 1,2,3,4$ which results in $61,98, 117,124 \neq m^3$
+
+
+If $a = 6$ then $n = 1,2,3,4$ which results in $91, 152, 189, 208, 215 \neq m^3$
+
+
+If $a = 7$ then $n = 1,2,3,4,5,6$ which results in $ 127, 218, 279, 316, 335, 342 \neq m^3$
+
+
+If $a = 8$ then $n = 1,2,3,4,5,6,7$ which results in $ 169, 296, 387, 448, 465, 504, 511\neq m^3$
+
+
+If $a = 9$ then $n = 1,2,3,4,5,6,7,8$ which results in $ 217, 386, 513, 604, 665, 702, 721, 728\neq m^3$\\
+
+
+$\therefore$ by proof of exhaustion, it is shown that there are now positive integers whose sum is a perfect cube
+
+
+
+less than 1000 \\ \ \\
+
+
+\textbf{4.} Use a proof by cases to show that min(a, min(b, c)) = min(min(a, b), c) whenever a, b, and c are real
+
+
+numbers\\
+
+
+Let $a,b,$and$ c$ be real numbers\\
+
+
+\textit{Case 1:} Suppose $min(b,c) = b$ and $a \leq b$
+
+
+Then $min(a,min(b,c))= min(a,b) = a$
+
+
+Also, $min(a,min(b,c))= min(a,c) = a$ because $min(b,c) = b \wedge a \leq b \rightarrow a \leq c$
+
+
+$\therefore min(min(a,min(b,c)) = min(min(a,b),c)$\\
+
+
+
+\textit{Case 2:} Suppose $min(b,c) = b$ and $b \leq a$
+
+
+Then $min(a,min(b,c))= min(a,b) = b$
+
+
+Also, $min(a,min(b,c))= min(a,c) = b$ because $min(b,c) = b \wedge b \leq a \rightarrow b \leq c$
+
+
+$\therefore min(min(a,min(b,c)) = min(min(a,b),c)$\\
+
+
+\textit{Case 3:} Suppose $min(b,c) = c$ and $a \leq c$
+
+
+Then $min(a,min(b,c))= min(a,c) = a$
+
+
+Also, $min(c,min(b,c))= min(a,c) = a$ because $min(b,c) = a \wedge a \leq c \rightarrow a \leq b$
+
+
+$\therefore min(min(a,min(b,c)) = min(min(a,b),c)$\\
+
+
+
+\textit{Case 4:} Suppose $min(b,c) = c$ and $c \leq a$
+
+
+Then $min(a,min(b,c))= min(a,c) = c$
+
+
+Also, $min(c,min(b,c))= min(a,c) = c$ because $min(b,c) = c \wedge c < a \rightarrow a \leq b$
+
+
+$\therefore min(min(a,min(b,c)) = min(min(a,b),c)$\\
+
+
+\textbf{6.} Prove using the notion of without loss of generality that 5x + 5y is an odd integer when x and y are
+
+
+integers of opposite parity\\
+
+
+\textit{Case 1:} When $x$ is even and $y$ is odd
+
+
+Then $x = 2m$ and $y = 2n+1$ where $m$ and $n$ are integers
+
+\begin{tabular}{ll}
+$5x + 5y$ & $= 5(2m) + 5(2n+1)$ \\
+          & $= 10m + 10n + 5$ \\
+          & $= 10m + 10n + 4 + 1$ \\
+          & $= 2(5m + 5n + 2) + 1$ \\
+\end{tabular} \\
+
+
+$\therefore$ $5x + 5y$ is odd when $x$ is even and $y$ is odd.\\
+
+
+
+\textit{Case 2:} When $x$ is odd and $y$ is even
+
+
+Then $x = 2m +1$ and $y = 2n$ where $m$ and $n$ are integers
+
+\begin{tabular}{ll}
+$5x + 5y$ & $= 5(2m+1) + 5(2n)$ \\
+          & $= 10m + 10n + 5$ \\
+          & $= 10m + 10n + 4 + 1$ \\
+          & $= 2(5m + 5n + 2) + 1$ \\
+\end{tabular} \\
+
+
+$\therefore$ $5x + 5y$ is odd when $x$ is odd and $y$ is even.\\
+
+
+\textbf{8.} Prove that there is a positive integer that equals the sum of the positive integers not exceeding it. Is
+
+
+your proof constructive or nonconstructive?\\
+
+
+Suppose that $n=$ sum of positive $n$ integers
+
+
+$n = 1 + 2 + 3 + ... + n$
+
+
+$n = \dfrac{n(n+1)}{n}$
+
+
+$2n = n(n+1)$
+
+
+$2 = (n+1)$
+
+
+$n = 1$
+
+
+$\therefore$ there is a positive integer that equals the sum of the positive integers that will not exceed it
+
+
+The proof is \bf constructive
+
+
+
+
+
+\end{solution}
+
+\newpage
 
 
 \bigskip
