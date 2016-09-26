@@ -224,7 +224,10 @@ INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
+INPUT VennDiagP01.png
+INPUT ./VennDiagP01.png
 OUTPUT homework_04.pdf
+INPUT ./VennDiagP01.png
 INPUT c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT homework_04.aux
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -234,3 +237,4 @@ INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

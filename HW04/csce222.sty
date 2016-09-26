@@ -1,0 +1,33 @@
+% Style file
+
+\usepackage{fullpage}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\usepackage{mathtools}
+
+% settings for algorithm2e psuedocode style
+\usepackage[procnumbered, ruled, linesnumbered, commentsnumbered, noend]{algorithm2e}
+% a few parameters that are set to typeset pseudocode
+\SetAlCapNameSty{textsc}
+\SetProcNameSty{textsc}
+\SetProcArgSty{textsc}
+
+%style for pseudocode comments
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{darkgray}{#1}}
+\SetCommentSty{mycommfont}
+
+% used for formatting graphs
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\newcommand{\question}[2] {\vspace{0.3in}\noindent{\subsection*{Question #1. {\normalfont #2}} \vspace{0.15in}}}
+
+\renewcommand{\part}[1] {{\vspace{0.15in}\textbf (#1)} \vspace{0.10in}}
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+

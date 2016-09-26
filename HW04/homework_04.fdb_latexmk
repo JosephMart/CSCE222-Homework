@@ -1,5 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1474437771 "homework_04.tex" "homework_04.pdf" "homework_04" 1474437772
+["pdflatex"] 1474762359 "homework_04.tex" "homework_04.pdf" "homework_04" 1474762360
+  "VennDiagP01.png" 1474673384 21576 69547ed0e4d6093c04b8ee9fa32a91d3 ""
   "c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1474430784 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1474428890 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1474428890 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,6 +35,7 @@
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1474428890 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1474428891 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1474428891 31099 342ef5a582aacbd3346f3cf4579679fa ""
+  "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1474428891 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1474432389 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty" 1474432650 7612 729a8cc22a1ee0029997c7f74717ae05 ""
   "c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty" 1474431232 7324 2310d1247db0114eb4726807c8837a0e ""
@@ -146,9 +148,9 @@
   "c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1474435108 1971396 88ec584bd2f573ef669f339cd83ff9be ""
   "c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1474435180 3870027 7a137c0ead7ff014812f017c7abc03d2 ""
   "c:/texlive/2016/texmf.cnf" 1474435090 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "homework_04.aux" 1474437772 8 a94a2480d3289e625eea47cd1b285758 ""
-  "homework_04.tex" 1474437770 2698 80b613c5500416133cff9baa1c09160b ""
+  "homework_04.aux" 1474762360 111 48ddebd0bd22f5ec44c3726b33c828a9 ""
+  "homework_04.tex" 1474762358 5039 02bc990df99a33b34c03e3c1582a152a ""
   (generated)
   "homework_04.pdf"
-  "homework_04.aux"
   "homework_04.log"
+  "homework_04.aux"
