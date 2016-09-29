@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1474868568 "homework_05.tex" "homework_05.pdf" "homework_05" 1474868568
+["pdflatex"] 1475126175 "homework_05.tex" "homework_05.pdf" "homework_05" 1475126175
   "c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1474430784 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1474428890 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1474428890 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -37,6 +37,7 @@
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1474428891 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1474428891 32716 08e384dc442464e7285e891af9f45947 ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1474428891 31099 342ef5a582aacbd3346f3cf4579679fa ""
+  "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1474428891 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1474428891 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1474431243 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty" 1474432650 1226 01a89dfef361f60ae7df13cd2946bc16 ""
@@ -63,9 +64,9 @@
   "c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1474435108 1971396 88ec584bd2f573ef669f339cd83ff9be ""
   "c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1474435180 3870027 7a137c0ead7ff014812f017c7abc03d2 ""
   "c:/texlive/2016/texmf.cnf" 1474435090 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "homework_05.aux" 1474868568 8 a94a2480d3289e625eea47cd1b285758 ""
-  "homework_05.tex" 1474868567 2783 83df670a78bc47effba71aeeb27dc2ce ""
+  "homework_05.aux" 1475126175 8 a94a2480d3289e625eea47cd1b285758 ""
+  "homework_05.tex" 1475126174 4602 bb0d9985657c4d2121b9064bee65e45c ""
   (generated)
-  "homework_05.aux"
   "homework_05.log"
   "homework_05.pdf"
+  "homework_05.aux"

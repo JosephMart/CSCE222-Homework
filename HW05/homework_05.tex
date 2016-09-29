@@ -48,13 +48,23 @@ Suppose that $A$, $B$, and $C$ are sets. Prove or disprove that $(A-B)-C=(A-C)-B
 \end{problem}
 
 \begin{solution}\ \\
-
-
+  \begin{equation*}
+      \begin{aligned}
+          \text{Suppose }  A &= \{1,2,3\} \\
+                           B &= \{1,2,3,4\} \\
+                           C &= \{1\} \\ \ \\
+            \text{Then } B-C &= \{2,3,4\} \\
+                     A-(B-C) &= {1} \\
+            \text{Also } A-B &= \emptyset \\
+        \text{Then } (A-B)-C &= \emptyset \\
+          \therefore (A-B)-C &\neq (A-C)-B
+      \end{aligned}
+    \end{equation*}
 \end{solution}
 
 \newpage
 
-% Sets and Set Operations
+% Sets and Set Operations - SupEx 40 Section 2.2
 \begin{problem} (25 points)\\
 Determine whether the symmetric difference is associative; that is, if $A$, $B$, and $C$ are sets, does it follow that $A \oplus (B \oplus C) = (A \oplus B) \oplus C$?
 \begin{enumerate}
@@ -65,14 +75,43 @@ Determine whether the symmetric difference is associative; that is, if $A$, $B$,
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{enumerate}
+  \item[a.] Use a Venn diagram.
 
+  \item[b.] Membership table
+    \begin{center}
+      \begin{tabular}{|c|c|c||c|c|c|c|}
+        \hline
+        $A$ & $B$ & $C$ & $A \oplus B$ & $B \oplus C$ & $(A \oplus B) \oplus C$ & $A \oplus (B \oplus C)$ \\ [0.5ex]
+        \hline
+        0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        \hline
+        0 & 0 & 1 & 0 & 1 & 1 & 1 \\
+        \hline
+        0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+        \hline
+        0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+        \hline
+        1 & 0 & 0 & 1 & 0 & 1 & 1 \\
+        \hline
+        1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+        \hline
+        1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+        \hline
+        1 & 1 & 1 & 0 & 0 & 1 & 1 \\
+        \hline
+      \end{tabular} \\ \ \\
+      $\therefore A \oplus (B \oplus C) = (A \oplus B) \oplus C$ because they have the same truth values
+    \end{center}
 
+  \item[c.] Use set identities.
 
+  \end{enumerate}
 \end{solution}
 
 \newpage
 
-% functions
+% functions - Exercise 2 Section 2.3
 \begin{problem} (25 points)\\
 Determine whether $f$ is a function from $\mathbb{Z}$ to $\mathbb{R}$ if
 \begin{enumerate}
@@ -85,9 +124,18 @@ Determine whether $f$ is a function from $\mathbb{Z}$ to $\mathbb{R}$ if
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{enumerate}
+  \item[a.] $f(n) = \pm n$
 
+  \item[b.] $\displaystyle f(n) = \left\lceil{n \over 2}\right\rceil$
 
+  \item[c.] $f(n) = \sqrt{n^2+1}$
 
+  \item[d.] $f(n) = \sqrt{n}$
+
+  \item[e.] $\displaystyle f(n) = {1 \over n^2 - 4}$
+
+  \end{enumerate}
 \end{solution}
 
 \newpage
@@ -106,10 +154,12 @@ Consider the function $f: \mathbb{Z} \to (\mathbb{N}-\{0\})~\text{ where }~f(n) 
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{enumerate}
+  \item[a.] Prove that $f$ is a bijection by showing that it is both injective and surjective.
 
+  \item[b.] Find the inverse function $f^{-1}$.
 
-
-
+  \end{enumerate}
 \end{solution}
 
 \newpage
