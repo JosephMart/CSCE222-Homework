@@ -2,8 +2,8 @@ PWD C:/Users/josep/Google Drive/16.3/CSCE 222/Latex-Homework/HW06
 INPUT c:/texlive/2016/texmf.cnf
 INPUT c:/texlive/2016/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT ./homework_06.tex
-OUTPUT homework_06.log
+INPUT ./hw06.tex
+OUTPUT hw06.log
 INPUT c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2016/texmf-dist/tex/latex/base/size10.clo
@@ -42,9 +42,9 @@ INPUT c:/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT c:/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT c:/texlive/2016/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT c:/texlive/2016/texmf-dist/tex/latex/cancel/cancel.sty
-INPUT homework_06.aux
-INPUT homework_06.aux
-OUTPUT homework_06.aux
+INPUT hw06.aux
+INPUT hw06.aux
+OUTPUT hw06.aux
 INPUT c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -89,9 +89,9 @@ INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-OUTPUT homework_06.pdf
+OUTPUT hw06.pdf
 INPUT c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT homework_06.aux
+INPUT hw06.aux
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -106,3 +106,4 @@ INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
+INPUT c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
