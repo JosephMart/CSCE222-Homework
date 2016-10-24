@@ -14,7 +14,7 @@
   given nor received any unauthorized aid on any portion of the academic work included in this assignment.
 }
 
- 
+
 \newcommand{\checklist}{\noindent\textbf{Checklist:}
 Did you...
 \begin{compactenum}
@@ -32,7 +32,7 @@ Did you...
 \newcommand{\mysectionnumber}[0]{503}
 
 \title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{YOUR NAME HERE}
+\author{Joseph Martinsen}
 
 \begin{document}
 
@@ -89,10 +89,31 @@ Find the language recognized by the given DFA:
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+  \begin{enumerate}
+    \item
+    \begin{align*}
+      (0,1)^{*} & \quad\text{From } s_1 \\
+      \lambda & \quad \text{From } s_0 \\
+      L(m) =& 1(0,1)^* \big| \lambda
+    \end{align*}
+    \item
+    \begin{align*}
+      1^{*} &\quad\text{from } s_2 \\
+      \lambda &\quad \text{from } s_0 \\
+      L(m) =&  01^* \mid \lambda
+    \end{align*}
+    \item
+    \begin{align*}
+      1^{*}0 \quad \text{from } s_0 \\
+      0+ &\quad \text{from } s_1 \\
+      (0,1)+ &\quad \text{from } s_3 \\
+      L(m) =& 1^{*}0^{+} \mid 1^{*}0^{+}1(0,1)^+
+    \end{align*}
+  \end{enumerate}
+\end{solution}
 
-%\newpage
+\newpage
 
 % Grammars
 \begin{problem} (20 points)\\
@@ -108,9 +129,20 @@ cC &::= cc
 \end{align*}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
-
+\begin{solution}\ \\
+  \begin{align}
+    S ::= aST \mid \lambda \quad\quad&\text{from this it can be seen the case when } n=0 \text{ for } a,b,c \text{ is true. Also, if not }\\
+    \quad\quad& \lambda \text{ the S string will continue to repeat itself thus the string must start with } a^n \\
+    a^{n}B^{n}C^{n} \quad\quad&  \text{ from } T ::= BC\\
+    %CB ::= BC \quad\quad& \\
+    a^{n}b^{n}C^{n} \quad\quad& \text{from }aB ::= ab\\
+    %bB ::= bb \quad\quad& \\
+    a^{n}b^{n}c^{n}\quad\quad& \text{from }bC ::= bc 
+    %cC ::= cc \quad\quad&
+  %   \text{Another path is for when } &T::=CB \text{ from } CB::=BC \\
+  %   a^{n}C^{n}B^{n} \quad\quad& \text{from lines } 1 \text{ and } 6
+  % \end{align}
+\end{solution}
 
 \bigskip
 \honor
