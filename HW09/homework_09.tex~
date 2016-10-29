@@ -32,7 +32,7 @@ Did you...
 \newcommand{\mysectionnumber}[0]{503}
 
 \title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{Joseph Martinsen}
+\author{YOUR NAME HERE}
 
 \begin{document}
 
@@ -53,11 +53,10 @@ Did you...
 \end{enumerate}
 \end{problem}
 
-\begin{solution}\ \\
+%\begin{solution}\ \\
+%\end{solution}
 
-\end{solution}
-
-\newpage
+%\newpage
 
 % Turing Machines
 \begin{problem} (25 points)\\
@@ -65,11 +64,8 @@ Construct a Turing machine that recognizes the set $\{0^{2n}1^n \mid n\geq 0\}$.
 \textit{Note: this is not an easy task, it will take you several revisions to get it right, do not get discouraged.}
 \end{problem}
 
-\begin{solution}\ \\
-
-\end{solution}
-
-\newpage
+%\begin{solution}\ \\
+%\end{solution}
 
 % Relations
 \begin{problem} (25 points)\\
@@ -83,11 +79,8 @@ For each relation on the set of all people, determine whether it is an equivalen
 \end{enumerate}
 \end{problem}
 
-\begin{solution}\ \\
-
-\end{solution}
-
-\newpage
+%\begin{solution}\ \\
+%\end{solution}
 
 % Relations
 \begin{problem} (25 points)\\
@@ -101,9 +94,8 @@ Which of these are partially ordered sets?  For each relation whichis not a part
 \end{enumerate}
 \end{problem}
 
-\begin{solution}\ \\
-
-\end{solution}
+%\begin{solution}\ \\
+%\end{solution}
 
 \bigskip
 \honor
