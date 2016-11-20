@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,url}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+
+\newcommand{\honor}{\noindent \textbf{Aggie Honor Statement: }On my honor as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the academic work included in this assignment.
+}
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+Did you...
+\begin{compactenum}
+\item abide by the Aggie Honor Code?
+\item solve all problems?
+\item start a new page for each problem?
+\item show your work clearly?
+\item type your solution?
+\item submit a PDF to eCampus?
+\end{compactenum}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}). \\You must show your work in order to recieve credit.\end{quote}}
+\newcommand{\mysectionnumber}[0]{503}
+
+\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
+\author{YOUR NAME HERE}
+
+\begin{document}
+
+\maketitle
+
+\problemset{11}
+
+\duedate{13 November 2016 (Sunday) before 11:59 p.m.}
+
+\bigskip
+
+% Recursive Definitions
+\begin{problem} (25 points)
+\begin{enumerate}
+\item Give a recursive definition for the set of bitstrings that have more 0s than 1s.
+\item Give a recursive definition for the set of bitstrings that have twice as many 0s as 1s.
+\end{enumerate}
+
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Structural Induction
+\begin{problem} (25 points)\\
+The \textbf{reversal} of a string $w$, denoted $w^R$, is the string consisting of the symbols of $w$ in reverse order.
+\begin{enumerate}
+\item Give a recursive definition for the reversal of a string. \textit{Hint: First define the reversal of the empty string.  Then write a string $w$ of length $n+1$ as $xy$, where $x$ is a string of length $n$ and $y\in\Sigma$, and express the reversal of $w$ in terms of $x^R$ and $y$.}
+\item Use structural induction to prove that $(w_1w_2)^R = w_2^Rw_1^R$.
+\end{enumerate}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Structural Induction
+\begin{problem} (25 points)\\
+The set of leaves and the set of internal vertices of a full binary tree can be defined recursively.\\
+\\
+\textit{Basis Step:} The root $r$ is a leaf of the full binary tree with exactly one vertex $r$.  This tree has no internal vertices.\\
+\\
+\textit{Recursive Step:} The set of leaves of the tree $T=T_1\cdot T_2$ is the union of the sets of leaves of $T_1$ and of $T_2$.  The internal vertices of $T$ are the root $r$ of $T$ and the union of the sets of internal vertices of $T_1$ and of $T_2$.\\
+\\
+Use structural induction to prove that $\ell(T)$, the number of leaves of a full binary tree $T$, is 1 more than $i(T)$, the number of internal vertices of $T$.
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Recursive Algorithms
+\begin{problem} (25 points)
+\begin{enumerate}
+\item Give a recursive algorithm for finding the reversal of a string.
+\item Prove that your recursive algorithm is correct.
+\end{enumerate}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+\newpage
+
+
+\bigskip
+\honor
+
+\bigskip
+\checklist
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,url}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+% settings for algorithm2e psuedocode style
+\usepackage[procnumbered, ruled, linesnumbered, commentsnumbered, noend]{algorithm2e}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+
+\newcommand{\honor}{\noindent \textbf{Aggie Honor Statement: }On my honor as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the academic work included in this assignment.
+}
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+Did you...
+\begin{compactenum}
+\item abide by the Aggie Honor Code?
+\item solve all problems?
+\item start a new page for each problem?
+\item show your work clearly?
+\item type your solution?
+\item submit a PDF to eCampus?
+\end{compactenum}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}). \\You must show your work in order to recieve credit.\end{quote}}
+\newcommand{\mysectionnumber}[0]{503}
+
+\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
+\author{YOUR NAME HERE}
+
+\begin{document}
+
+\maketitle
+
+\problemset{12}
+
+\duedate{20 November 2016 (Sunday) before 11:59 p.m.}
+
+\bigskip
+
+% program correctness
+\begin{problem} (20 points)\\
+Verify that the following program segment is correct with respect to the initial assertion $y=3$ and the final assertion $z=6$.
+\begin{algorithm}
+\DontPrintSemicolon
+\caption{program segment}
+$x := 2$\;
+$z := x + y$\;
+\If{$y>0$}{
+	$z:=z+1$\;
+}
+\Else{
+	$z := 0$\;
+}
+\end{algorithm}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% program correctness
+\begin{problem} (30 points)\\
+Use a loop invariant to prove that the following program segment for computing the $n$-th power, where $n$ is a positive integer, of a real number $x$ is correct.
+\begin{algorithm}
+\caption{program segment}
+\DontPrintSemicolon
+$power := 1$\;
+$i := 1$\;
+\While{$i \leq n$}{
+	$power := power * x$\;
+	$i := i + 1$\;
+}
+\end{algorithm}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+
+\bigskip
+\honor
+
+\bigskip
+\checklist
+\end{document}
