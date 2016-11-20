@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1477773345 "homework_09.tex" "homework_09.pdf" "homework_09" 1477773345
+["pdflatex"] 1479685004 "homework_09.tex" "homework_09.pdf" "homework_09" 1479685005
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1475625600 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1475625600 1888031 5317a64a246c13fa560847c387843238 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1475625600 1004 54797486969f23fa377b128694d548df ""
@@ -149,8 +149,8 @@
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1475625600 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1475625600 31956 afe4561ef11f8c19b5680fda5e0bdf7f ""
   "/usr/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1475625600 3883510 f9efb41b7adc601ed992fb6e0b31e14b ""
-  "homework_09.aux" 1477773345 8 a94a2480d3289e625eea47cd1b285758 ""
-  "homework_09.tex" 1477773345 4082 2f62a628d8e8158d7d2e3dffd4bac50a ""
+  "homework_09.aux" 1479685005 8 a94a2480d3289e625eea47cd1b285758 ""
+  "homework_09.tex" 1479685004 8479 7cc0e9ab7aceea68ad350e90e8685293 ""
   (generated)
   "homework_09.pdf"
   "homework_09.log"

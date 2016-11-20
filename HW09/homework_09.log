@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.5)  29 OCT 2016 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.5)  20 NOV 2016 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -602,36 +602,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--50
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 [1
 
 {/usr/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 [4] (./homework_09.aux) ) 
 Here is how much of TeX's memory you used:
- 14100 strings out of 493014
- 285397 string characters out of 6123238
- 333474 words of memory out of 5000000
- 17355 multiletter control sequences out of 15000+600000
+ 14303 strings out of 493014
+ 290121 string characters out of 6123238
+ 339474 words of memory out of 5000000
+ 17558 multiletter control sequences out of 15000+600000
  11741 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,66p,501b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,68p,501b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-
@@ -643,7 +648,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on homework_09.pdf (4 pages, 127427 bytes).
+Output written on homework_09.pdf (4 pages, 133331 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

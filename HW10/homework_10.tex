@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,url}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+
+\newcommand{\honor}{\noindent \textbf{Aggie Honor Statement: }On my honor as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the academic work included in this assignment.
+}
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+Did you...
+\begin{compactenum}
+\item abide by the Aggie Honor Code?
+\item solve all problems?
+\item start a new page for each problem?
+\item show your work clearly?
+\item type your solution?
+\item submit a PDF to eCampus?
+\end{compactenum}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}). \\You must show your work in order to recieve credit.\end{quote}}
+\newcommand{\mysectionnumber}[0]{503}
+
+\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
+\author{YOUR NAME HERE}
+
+\begin{document}
+
+\maketitle
+
+\problemset{10}
+
+\duedate{6 November 2016 (Sunday) before 11:59 p.m.}
+
+\bigskip
+
+% Mathematical Induction
+\begin{problem} (25 points)\\
+Use  induction on $n$ to prove that $\displaystyle \sum_{i=0}^{n-1} \frac{i}{2^i} = 2-\frac{n+1}{2^{n-1}}$
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Mathematical Induction
+\begin{problem} (25 points)\\
+A guest at a party is a \textbf{celebrity} if this person is known by every other guest, but knows none of them. 
+There is at most one celebrity at a party\footnote{If there were two, they
+would know each other. A particular party may have no celebrity}. 
+Your task is to find the celebrity, if one exists, at a party by asking only one type of question --
+asking a guest whether they know a second guest.
+Everyone must answer your questions truthfully.
+That is, if Alice and Bob are two people at the party, you can ask Alice whether she knows Bob; 
+she must answer correctly.
+Use mathematical induction to show that if there are $n$ people at the party, then you can find the celebrity, if there is one, with $3(n-1)$ questions. 
+\textit{Hint: First, ask a question to eliminate one person as a celebrity. 
+Then use the inductive hypothesis to identify a potential celebrity.
+Finally, ask two more questions to determine whether that person is actually a celebrity.} 
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Strong Induction
+\begin{problem} (25 points)\\
+Determine which Fibonacci numbers are divisible by 3. Use strong induction on $n$ to prove your conjecture.\\
+The Fibonacci sequence satisfies the recurrence relation $f_n = f_{n-1} + f_{n-2}$ where $f_0 = 0$ and $f_1 = 1$.
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Strong Induction
+\begin{problem} (25 points)\\
+Restaurant 222 offers gift certificates in denominations of \$8 and \$15.  Determine the possible total amounts you can form using these denominations of gift certificates.  Prove your answer using strong induction.
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+
+\bigskip
+\honor
+
+\bigskip
+\checklist
+\end{document}
