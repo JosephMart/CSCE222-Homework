@@ -34,7 +34,7 @@ Did you...
 \newcommand{\mysectionnumber}[0]{503}
 
 \title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{YOUR NAME HERE}
+\author{Joseph Martinsen}
 
 \begin{document}
 
@@ -63,10 +63,19 @@ $z := x + y$\;
 \end{algorithm}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+  \begin{align*}
+    p \Rightarrow y &:= 3 \\
+    x &:= 2 \\
+    z &:= x + y \Rightarrow 5 \\
+    \text{Condition: } y &> 0 \\
+    z &:= 5 + 1 = 6 \\
+    \therefore p\{S\}q \text{ because } z&=6 \wedge z =6 \text{ with given p}
+  \end{align*}
 
-%\newpage
+\end{solution}
+
+\newpage
 
 % program correctness
 \begin{problem} (30 points)\\
@@ -83,10 +92,44 @@ $i := 1$\;
 \end{algorithm}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+To show p is a loop invariant, if p is true at the beginning of the loop, then p must still hold true after the exectutoin of the loop
+\begin{center}
+\begin{align*}
+  \text{Let } p \Rightarrow i \leq n+1 &\wedge power = x^{i-1} \\
+  \text{Assume } p \text{ is true,} \\
+  \text{Check if $p$ is true at the end of the loop}\\
+  i_{loop} &= i+1 \\
+  power_{loop} &= power * x\\
+   &= x^{i-1} * x \\
+   &= x^i \\
+   &= x^{i_{loop}-1} \\
+   \text{With condition } i &\leq n \\
+   i_{loop} &\leq n+1 \text{ follows} \\
+   \therefore p &\text{ is true at the end of the loop}\\
+   \text{Show $p$ is true before loop is executed}\\
+   \text{It is given that } n \geq 1 & \text{ so, } i \leq n+1 \\
+   power &= 1 \\
+   &= x^0 \\
+   &= x^{i-1} \\
+   \therefore p \text{ is true before the loop executes}\\
+   \text{Show loop terminates correctly}\\
+   \text{Loop terminates when $p$ is true and $i \leq n$ is false}\\
+   i &= n + 1 \text{ so }\\
+   power &= x^{(n+1)-i} \\
+   &= x^n \\
+   \therefore \text{Loop terminates correctly} \\
+   \text{Show loop terminates} \\
+   i_0 = 1 \\
+   i = i + 1\\
+   i \text{ will continue to increace until } i > n \text{ resulting in }i \leq n \text{ being false} \\
+   \therefore \text{loop terminates after $n$ iterations} \\
+   \therefore \text{program is correct}
+\end{align*}
+\end{center}
+\end{solution}
 
-%\newpage
+\newpage
 
 
 \bigskip

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.5)  20 NOV 2016 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.5)  20 NOV 2016 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,7 +603,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Here is how much of TeX's memory you used:
  14100 strings out of 493014
  285397 string characters out of 6123238
- 335472 words of memory out of 5000000
+ 335474 words of memory out of 5000000
  17355 multiletter control sequences out of 15000+600000
  11741 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -620,7 +620,7 @@ blic/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmtt10.pfb>
-Output written on homework_10.pdf (1 page, 151098 bytes).
+Output written on homework_10.pdf (1 page, 150884 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
