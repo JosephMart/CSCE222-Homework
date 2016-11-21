@@ -49,10 +49,25 @@ Did you...
 Use  induction on $n$ to prove that $\displaystyle \sum_{i=0}^{n-1} \frac{i}{2^i} = 2-\frac{n+1}{2^{n-1}}$
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
 
-%\newpage
+  \begin{align*}
+    \displaystyle \sum_{i=0}^{n-1} \frac{i}{2^i} = 2-\frac{n+1}{2^{n-1}}  &\text{ is true for all } n \geq 1 \\
+    \text{\underline{Basis Step: }Show } P(1)&\\
+    P(1) &= 2-\frac{1+1}{2^{1-1}} \\
+    &= 2-\frac{2}{1} = 0\\
+    P(1) &= \displaystyle \sum_{i=0}^{1-1} \frac{i}{2^i} \\
+    &= \frac{0}{2^0} = 0\\
+    \therefore P(0) \text{ holds} \\
+    \text{\underline{Inductive Step: }Show }P(k) \rightarrow P(k+1)\\
+    \text{Assume } P(k) \text{for arbitrary } k > 1: &\displaystyle \sum_{i=0}^{k-1} \frac{i}{2^i} = 2-\frac{k+1}{2^{k-1}} \\
+    \text{Show }P(k+1):& \displaystyle \sum_{i=0}^{k} \frac{i}{2^i} = 2-\frac{k+2}{2^{k}} \\
+    \displaystyle \sum_{i=0}^{k} \frac{i}{2^i} &=
+  \end{align*}
+
+\end{solution}
+
+\newpage
 
 % Mathematical Induction
 \begin{problem} (25 points)\\

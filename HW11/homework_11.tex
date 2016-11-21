@@ -2,6 +2,7 @@
 \usepackage{amsmath,amssymb,amsthm,latexsym,paralist,url}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
+\usepackage[procnumbered, ruled, linesnumbered, commentsnumbered, noend]{algorithm2e}
 \usetikzlibrary{arrows,automata}
 
 \theoremstyle{definition}
@@ -53,10 +54,22 @@ Did you...
 
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\begin{enumerate}
+  \item 
+  \begin{align*}
+    0 &\in S \\
+    x,y \in S &\rightarrow xy1, x1y, 1xy,xy \in S
+  \end{align*}
+  \item
+    \begin{align*}
+    0 &\in S \\
+    x,y \in S &\rightarrow 1x00, 00x1, 0x1y0,0xy \in S
+  \end{align*}
+\end{enumerate}
+\end{solution}
 
-%\newpage
+\newpage
 
 % Structural Induction
 \begin{problem} (25 points)\\
@@ -67,10 +80,10 @@ The \textbf{reversal} of a string $w$, denoted $w^R$, is the string consisting o
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
-%\newpage
+\newpage
 
 % Structural Induction
 \begin{problem} (25 points)\\
@@ -83,10 +96,10 @@ The set of leaves and the set of internal vertices of a full binary tree can be 
 Use structural induction to prove that $\ell(T)$, the number of leaves of a full binary tree $T$, is 1 more than $i(T)$, the number of internal vertices of $T$.
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
-%\newpage
+\newpage
 
 % Recursive Algorithms
 \begin{problem} (25 points)
@@ -96,8 +109,20 @@ Use structural induction to prove that $\ell(T)$, the number of leaves of a full
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\begin{algorithm}
+\DontPrintSemicolon
+\caption{reversal( x: bit string)}
+$l := length(x)$\;
+\If{$l\leq 1$}{
+	$reversal(x) := x$\;
+}
+\Else{
+	$reversal(x) := substr(x,l,l)reversal(substr(x,1,l-1)$\;
+}
+\end{algorithm}
+substr($a$,$b$,$c$) is the substring of $a$ consisting of the symbols in the $b$ through $c$ position
+\end{solution}
 
 \newpage
 

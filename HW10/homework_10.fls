@@ -219,9 +219,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT homework_10.pdf
 INPUT /usr/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT homework_10.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -237,3 +237,4 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
