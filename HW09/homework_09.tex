@@ -166,7 +166,13 @@ For each relation on the set of all people, determine whether it is an equivalen
 \end{problem}
 
 \begin{solution}\ \\
-
+\begin{enumerate}
+  \item Yes it is a equivalence relation
+  \item Yes it is a equivalence relation
+  \item Not transitive $\forall a,b,c (((a,b) \in \mathbb{R} \wedge (b,c) \in \mathbb{R}) \rightarrow (a,c) \in \mathbb{R})$ because if $a$ has a common parent with $b$ and $b$ has a common parent with $c$, it does not follow that $a$ and $c$ have a common parent.
+  \item Not reflexive $\forall a((a,a) \in \mathbb{R}$, cannot meet yourself. Also not transitive, $\forall a,b,c (((a,b) \in \mathbb{R} \wedge (b,c) \in \mathbb{R}) \rightarrow (a,c) \in \mathbb{R})$ 
+\item Not transitive $\forall a,b,c (((a,b) \in \mathbb{R} \wedge (b,c) \in \mathbb{R}) \rightarrow (a,c) \in \mathbb{R})$. If $a$ and $b$ speaks English and $b$ and $c$ speak French, it does not follow that $a$ speaks French.
+\end{enumerate}
 \end{solution}
 
 \newpage
@@ -184,6 +190,21 @@ Which of these are partially ordered sets?  For each relation whichis not a part
 \end{problem}
 
 \begin{solution}\ \\
+A poset S is reflexive, transitive, and antisymmetric.\\
+ Reflexive $\forall a((a,a) \in \mathbb{R}$ \\
+ Symmetric $\forall a,b((a,b) \in \mathbb{R} \rightarrow (b,a) \in \mathbb{R})$ \\
+ Antisymetric $\forall a,b (((a,b) \in \mathbb{R} \wedge (b,a) \in \mathbb{R}) \rightarrow (a=b))$
+\begin{enumerate}
+  \item Yes $=$ is a poset
+  \item Yes $\leq$ is a poset
+  \item No $>$ is not a poset \\
+    It is not antisymmetric $\forall a,b (((a,b) \in \mathbb{R} \wedge (b,a) \in \mathbb{R}) \rightarrow (a=b))$ \\
+    If $a > b, b > a$ it does not follow that $a = b$ because $a > b$ would be false
+    \item No $\neq$ is not a poset\\
+        It is not antisymmetric $\forall a,b (((a,b) \in \mathbb{R} \wedge (b,a) \in \mathbb{R}) \rightarrow (a=b))$ \\
+        If $a\neq b$, it does not follow that $a=b$
+      \item No because it is not  Symmetric $\forall a,b((a,b) \in \mathbb{R} \rightarrow (b,a) \in \mathbb{R})$ in all cases
+\end{enumerate}
 
 \end{solution}
 

@@ -62,7 +62,11 @@ Use  induction on $n$ to prove that $\displaystyle \sum_{i=0}^{n-1} \frac{i}{2^i
     \text{\underline{Inductive Step: }Show }P(k) \rightarrow P(k+1)\\
     \text{Assume } P(k) \text{for arbitrary } k > 1: &\displaystyle \sum_{i=0}^{k-1} \frac{i}{2^i} = 2-\frac{k+1}{2^{k-1}} \\
     \text{Show }P(k+1):& \displaystyle \sum_{i=0}^{k} \frac{i}{2^i} = 2-\frac{k+2}{2^{k}} \\
-    \displaystyle \sum_{i=0}^{k} \frac{i}{2^i} &=
+    \displaystyle \sum_{i=0}^{k} \frac{i}{2^i} &= \frac{k}{2^k} + \displaystyle \sum_{i=0}^{k-1} \frac{i}{2^i} \\
+    &= \frac{k}{2^k} + 2-\frac{k+1}{2^{k-1}}&\text{By HI} \\
+    &= 2 - \frac{k+2}{2^k} \\
+    \therefore P(k) \rightarrow P(k+1) \text{ holds} \\
+    \therefore \displaystyle \sum_{i=0}^{n-1} \frac{i}{2^i} = 2-\frac{n+1}{2^{n-1}}  &\text{ holds for all } n \geq 1 \text{ by mathematical induction}
   \end{align*}
 
 \end{solution}
@@ -85,10 +89,14 @@ Then use the inductive hypothesis to identify a potential celebrity.
 Finally, ask two more questions to determine whether that person is actually a celebrity.} 
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\underline{Base Step:} if two people $A$ and $B$ are at a paty, you ask if they know one another. If one of the two peole says Yes, and the other one says No, then the person who said No is a celebrity, else there is not a celebrity present \\
+\underline{Inductive Step: } Assume that the above statement is true for a party of k people and prove that it is also true for a party of $k+1$ people.\\
+Let $A$ and $B$ be party members. Ask $A$ if they know $B$. If they answer Yes, A is not a celebrity. Else, if they answer no then it follows that $B$ is not a celebrity. One party member has now been ruled out as being a celebrity. Going on to the next $n$ party members, use the inductive hypothesis to find the celebrity with $3(n-1)$ questions.\\
+If there is a celebrity $C$, ask $C$ if they know the last person. Also ask the last person if they know $C$. If $C$ does not know the last party member and the last party member knows $C$, then $C$ is a celebrity.
+\end{solution}
 
-%\newpage
+\newpage
 
 % Strong Induction
 \begin{problem} (25 points)\\
@@ -106,8 +114,11 @@ The Fibonacci sequence satisfies the recurrence relation $f_n = f_{n-1} + f_{n-2
 Restaurant 222 offers gift certificates in denominations of \$8 and \$15.  Determine the possible total amounts you can form using these denominations of gift certificates.  Prove your answer using strong induction.
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+  \begin{align*}
+    P(n) = 
+  \end{align*}
+\end{solution}
 
 
 \bigskip
