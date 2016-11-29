@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,url}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{resources}{Resources}
+
+
+\newcommand{\honor}{\noindent \textbf{Aggie Honor Statement: }On my honor as an Aggie, I have neither
+  given nor received any unauthorized aid on any portion of the academic work included in this assignment.
+}
+
+ 
+\newcommand{\checklist}{\noindent\textbf{Checklist:}
+Did you...
+\begin{compactenum}
+\item abide by the Aggie Honor Code?
+\item solve all problems?
+\item start a new page for each problem?
+\item show your work clearly?
+\item type your solution?
+\item submit a PDF to eCampus?
+\end{compactenum}
+}
+
+\newcommand{\problemset}[1]{\begin{center}\textbf{Problem Set #1}\end{center}}
+\newcommand{\duedate}[1]{\begin{quote}\textbf{Due: #1} on eCampus (\url{ecampus.tamu.edu}). \\You must show your work in order to recieve credit.\end{quote}}
+\newcommand{\mysectionnumber}[0]{503}
+
+\title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
+\author{YOUR NAME HERE}
+
+\begin{document}
+
+\maketitle
+
+\problemset{14}
+
+\duedate{4 December 2016 (Sunday) before 11:59 p.m.}
+
+\bigskip
+
+% Basic Counting
+\begin{problem} (25 points)\\
+How many bitstrings of length 10 contain either five consecutive 0s or five consecutive 1s?
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Pigeonhole Principle
+\begin{problem} (25 points)\\
+A computer network consists of six computers.  Each computer is directly connected to zero or more of the other computers.  Show that there are at least two computers in the network that are directly connected to the same number of other computers.
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Permutations and Combinations
+\begin{problem} (25 points)\\
+How many ways are there for a horse race with four horses to finish if ties are possible?\\
+\textit{Note: any number of the four horses may tie.}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+%\newpage
+
+% Permutations with Repetition
+\begin{problem} (25 points)
+\begin{enumerate}
+\item 
+How many different strings can be made from the word PEPPERCORN when all the letters are used?
+
+\item
+How many of these strings start and end with the letter P?
+
+\item
+In how many of these strings (from part 1) are the three letter Ps consecutive?
+\end{enumerate}
+\end{problem}
+
+%\begin{solution}\ \\
+%\end{solution}
+
+
+\bigskip
+\honor
+
+\bigskip
+\checklist
+\end{document}
