@@ -82,6 +82,17 @@ How many ways are there for a horse race with four horses to finish if ties are 
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{align*}
+    \text{1 is $1^{\text{st}}$,1 is $2^\text{nd}$, 1 is $3^{\text{rd}}$, 1 is $4^{\text{th}}$: }& 4! = 24 \\
+    \text{1 is $1^{\text{st}}$,1 is $2^\text{nd}$, 2 are $3^{\text{rd}}$: }& {4 \choose 1} \cdot {3 \choose 1} = 12  \\
+    \text{1 is $1^{\text{st}}$,2 are $2^\text{nd}$, 1 is $3^{\text{rd}}$: }&  {4 \choose 1} \cdot {3 \choose 2} = 12\\
+    \text{1 is $1^{\text{st}}$,3 are $2^\text{nd}$: }& {4\choose 1} = 4  \\
+    \text{2 are $1^{\text{st}}$,2 are $2^\text{nd}$: }& {4 \choose 2} = 6 \\
+    \text{2 are $1^{\text{st}}$,1 is $2^\text{nd}$, 1 is $3^{\text{rd}}$: }& {4 \choose 2} \cdot 2 = 12 \\
+    \text{3 are $1^{\text{st}}$,1 is $2^\text{nd}$: }& {4 \choose 3} = 12 \\
+    \text{4 are $1^{\text{st}}$: }& 1 \\
+    \text{Total: }& 75
+  \end{align*}
 \end{solution}
 
 \newpage
@@ -101,6 +112,20 @@ In how many of these strings (from part 1) are the three letter Ps consecutive?
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{enumerate}
+    \item
+      \begin{align*}
+        \dfrac{10!}{3!2!2!} = 151200
+      \end{align*}
+    \item
+      \begin{align*}
+        \dfrac{8!}{2!2!} = 10080
+      \end{align*}
+    \item
+      \begin{align*}
+        \dfrac{8!}{2!2!} = 10080
+      \end{align*}
+  \end{enumerate}
 \end{solution}
 
 
