@@ -32,7 +32,7 @@ Did you...
 \newcommand{\mysectionnumber}[0]{503}
 
 \title{CSCE 222: Discrete Structures for Computing\\Section \mysectionnumber\\Fall 2016}
-\author{YOUR NAME HERE}
+\author{Joseph Martinsen}
 
 \begin{document}
 
@@ -49,20 +49,20 @@ Did you...
 How many bitstrings of length 10 contain either five consecutive 0s or five consecutive 1s?
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
-%\newpage
+\newpage
 
 % Pigeonhole Principle
 \begin{problem} (25 points)\\
 A computer network consists of six computers.  Each computer is directly connected to zero or more of the other computers.  Show that there are at least two computers in the network that are directly connected to the same number of other computers.
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
-%\newpage
+\newpage
 
 % Permutations and Combinations
 \begin{problem} (25 points)\\
@@ -70,10 +70,10 @@ How many ways are there for a horse race with four horses to finish if ties are 
 \textit{Note: any number of the four horses may tie.}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
-%\newpage
+\newpage
 
 % Permutations with Repetition
 \begin{problem} (25 points)
@@ -89,8 +89,8 @@ In how many of these strings (from part 1) are the three letter Ps consecutive?
 \end{enumerate}
 \end{problem}
 
-%\begin{solution}\ \\
-%\end{solution}
+\begin{solution}\ \\
+\end{solution}
 
 
 \bigskip

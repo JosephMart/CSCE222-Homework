@@ -50,6 +50,11 @@ How many bitstrings of length 10 contain either five consecutive 0s or five cons
 \end{problem}
 
 \begin{solution}\ \\
+  \begin{align*}
+    \text{Bit strings that have $5$ consecutive  0s or 1s: } &2 \cdot (2^5 +2^5) = 128 \\
+    \text{2 posibilities must be taken out to satisfy either: } &1111100000 \& 0000011111 \\
+    128-2 &= 126
+  \end{align*}
 \end{solution}
 
 \newpage
@@ -60,6 +65,12 @@ A computer network consists of six computers.  Each computer is directly connect
 \end{problem}
 
 \begin{solution}\ \\
+Say the 6 computers are named $C_0, C_1, C_2, C_3, C_4,$ and $ C_5$ \\
+$C_n$ can be connected to a possible 0,1,2,3,4, or 5 computers. \\
+If $C_n$ is connected to 0 computers, then it is not possible for $C_m$ to be connected to 5 computers. \\
+In the same manner, if $C_n$ is connected to 5 computers, then it is not possible for $C_m$ to be connected to 0 computers. \\
+The only choices all 6 computers have are either being connected to 0,1,2,3, or 4 computers or to connect to 1,2,3,4, or 5 computers. A total of 5 options for 6 computers. \\
+$\therefore$ With 6 computers and 5 choices, the Pigeonhole principle says that at least two must have the same number of direct connections.
 \end{solution}
 
 \newpage
